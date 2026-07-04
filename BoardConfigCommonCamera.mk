@@ -11,3 +11,13 @@
 # SEPolicy: common camera vendor file_contexts overrides (moved from
 # device/oneplus/sm8850-common BoardConfigCommon.mk + sepolicy/vendor)
 BOARD_SEPOLICY_DIRS += device/oneplus/sm8850-common-camera/sepolicy/vendor
+
+# Oplus camera sepolicy (absorbed from the retired
+# vendor/oplus/camera/sepolicy/SEPolicy.mk, Lane A). Registrations moved
+# here from the deleted SEPolicy.mk; sepolicy/ was renamed to
+# sepolicy/oplus-camera/ to keep it distinct from the common vendor dir above.
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/sm8850-common-camera/sepolicy/oplus-camera/vendor
+
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/oneplus/sm8850-common-camera/sepolicy/oplus-camera/private
+
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/oneplus/sm8850-common-camera/sepolicy/oplus-camera/public
